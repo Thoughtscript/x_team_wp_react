@@ -6,8 +6,12 @@ It also combines PHP <a href="http://php.net/releases/7_0_0.php">**7.0**</a> and
 
 # Installation and Set Up
 
-<a href="http://www.apachefriends.org/xampp-en.html">**XAMPP**</a>
+The great folks over at <a href="http://www.apachefriends.org/xampp-en.html">**XAMPP**</a> have created a fantastic installation package including everything. Check out the article for a walkthrough (with pictures) that should get you set up in under 5.
 
 # Licensing
 
 MIT Licensed.
+
+# Shout Outs
+
+1.	Thanks to <a href="https://github.com/Ollie1700/barebones-wp">**Barebones WP**</a> for the slick and minimal theme boilerplate. 
