@@ -1,0 +1,13 @@
+img {
+	height: 100px;
+	width: auto;
+}
+
+div.mceTemp {
+	display: block;
+}
+
+.wp-caption {
+	display: inline-block;
+	width: auto !important;
+}

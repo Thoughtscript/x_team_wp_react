@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en" class="no-js">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="x-ua-compatible" content="ie=edge,chrome=1">
+		<meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui">
+
+		<link rel="stylesheet" href="{{ asset_url }}/assets/css/application.min.css" />
+		<link rel="apple-touch-icon-precomposed" sizes="120x120" href="{{ asset_url }}/assets/favicons/apple-touch-icon-120x120.png" />
+		<link rel="apple-touch-icon-precomposed" sizes="152x152" href="{{ asset_url }}/assets/favicons/apple-touch-icon-152x152.png" />
+		<link rel="apple-touch-icon-precomposed" sizes="167x167" href="{{ asset_url }}/assets/favicons/apple-touch-icon-167x167.png" />
+		<link rel="apple-touch-icon-precomposed" sizes="180x180" href="{{ asset_url }}/assets/favicons/apple-touch-icon-180x180.png" />
+		<link rel="icon" type="image/png" sizes="16x16"   href="{{ asset_url }}/assets/favicons/favicon-16x16.png" />
+		<link rel="icon" type="image/png" sizes="32x32"   href="{{ asset_url }}/assets/favicons/favicon-32x32.png" />
+		<link rel="icon" type="image/png" sizes="96x96"   href="{{ asset_url }}/assets/favicons/favicon-96x96.png" />
+		<link rel="icon" type="image/png" sizes="192x192" href="{{ asset_url }}/assets/favicons/android-chrome-192x192.png" />
+		<link rel="icon" type="image/png" sizes="512x512" href="{{ asset_url }}/assets/favicons/favicon-512x512.png" />
+		<link rel="mask-icon" href="{{ asset_url }}/assets/favicons/favicon.svg" color="#000000">
+		<meta name="application-name"                content="{{ THEME }}"/>
+		<meta name="msapplication-TileColor"         content="#000000" />
+		<meta name="msapplication-TileImage"         content="{{ asset_url }}/assets/favicons/mediumtile.png" />
+		<meta name="msapplication-square70x70logo"   content="{{ asset_url }}/assets/favicons/smalltile.png" />
+		<meta name="msapplication-square150x150logo" content="{{ asset_url }}/assets/favicons/mediumtile.png" />
+		<meta name="msapplication-wide310x150logo"   content="{{ asset_url }}/assets/favicons/widetile.png" />
+		<meta name="msapplication-square310x310logo" content="{{ asset_url }}/assets/favicons/largetile.png" />
+
+		<script>
+			window.dataLayer = [];
+
+			(function(w, d) {
+				if (('MutationObserver' in w)) {
+					d.documentElement.classList.remove('no-js');
+
+					function loadScript(src, async, defer) {
+						async = typeof async === 'undefined' ? true : !!async;
+						defer = typeof defer === 'undefined' ? true : !!defer;
+
+						var s = d.createElement('script');
+						s.async = async;
+						s.defer = defer;
+						s.src = src;
+
+						var f = d.getElementsByTagName('script')[0];
+						f.parentNode.insertBefore(s, f);
+					}
+
+					if (('customElements' in w) ? 'es6' : 'es5' === 'es6') {
+						loadScript('{{ asset_url }}/assets/js/app.es6.min.js', true, false);
+					} else {
+						loadScript('https://cdn.polyfill.io/v2/polyfill.min.js?features=default-3.6,Symbol,fetch,Array.prototype.includes,Array.prototype.find,Object.entries&flags=gated&version=latest&unknown=polyfill', false, true);
+						loadScript('https://cdn.rawgit.com/webcomponents/custom-elements/6ad99939/custom-elements.min.js', false, true);
+						loadScript('{{ asset_url }}/assets/js/app.min.js', false, true);
+					}
+
+				}
+			})(window, document);
+
+		</script>
+
+		{{ function('wp_head') }}
+	</head>
+	<body>
+		<!-- Google Tag Manager (noscript) -->
+		<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=gtm-xxxxxxx"
+		height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+		<!-- End Google Tag Manager (noscript) -->

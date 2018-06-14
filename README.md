@@ -10,8 +10,9 @@ The great folks over at <a href="http://www.apachefriends.org/xampp-en.html">**X
 
 # Licensing
 
-MIT Licensed.
+MIT Licensed. Free to Use!
 
 # Shout Outs
 
-1.	Thanks to <a href="https://github.com/Ollie1700/barebones-wp">**Barebones WP**</a> for the slick and minimal theme boilerplate. 
+1. Thanks to <a href="https://github.com/Ollie1700/barebones-wp">**Barebones WP**</a> for the slick and minimal theme boilerplate. 
+2. Special thanks to <a href="https://github.com/mrhenry/wp-base-theme">**mrhenry**</a> for the great Timber base theme!
