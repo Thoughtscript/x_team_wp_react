@@ -49,7 +49,7 @@ main.mainTable {
           color: $offsetColor;
           grid-row: 2;
           font-size: 15px;
-          grid-column: 2 / span 2;
+          grid-column: span 3;
         }
       }
     }

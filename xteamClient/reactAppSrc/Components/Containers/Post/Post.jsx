@@ -10,50 +10,49 @@ import React from 'react'
 import CustomFooter from '../../Presentation/CustomFooter'
 import './Post.scss'
 import { checkArray } from '../../../Helpers/Generic'
-import { asyncGet } from '../../../Helpers/Xhr/Get'
-import { api, API_POSTS } from '../../../Constants'
+import { POST_DATA } from '../../../Data'
 
 export class Post extends React.Component {
   constructor (props) {
     super(props)
     this.state = {
-      users: [],
+      posts: POST_DATA,
       ...this.props
     }
   }
 
   componentDidMount () {
     try {
-
-      asyncGet(api(API_POSTS)).then(success => {
+      /**
+       asyncGet(api(API_POSTS)).then(success => {
         this.setState({
-          users: success || []
+          posts: success || POST_DATA
         })
       })
-
+       */
     } catch (ex) {
       console.log(ex)
     }
   }
 
   render () {
-    const {users} = this.state
+    const {posts} = this.state
     return (
       <div className="mainContentWrapper">
         <main className="mainTable">
           <table>
             <thead>
             <tr>
-              <th>Name</th>
-              <th>Email</th>
+              <th>Title</th>
+              <th>Date</th>
             </tr>
             </thead>
             <tbody>
             {
-              checkArray(users) && (users).map(user =>
+              (posts).map(p =>
                 <tr>
-                  <th>{user.name}</th>
-                  <th>{user.email.address}</th>
+                  <th>{p.title.rendered}</th>
+                  <th>{p.date}</th>
                 </tr>
               )
             }

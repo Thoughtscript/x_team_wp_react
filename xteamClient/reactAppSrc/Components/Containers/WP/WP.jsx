@@ -9,55 +9,59 @@
 import React from 'react'
 import CustomFooter from '../../Presentation/CustomFooter'
 import './WP.scss'
-import { checkArray } from '../../../Helpers/Generic'
-import { asyncGet } from '../../../Helpers/Xhr/Get'
-import { api } from '../../../Constants'
+import { WP_JSON } from '../../../Data'
 
 export class WP extends React.Component {
   constructor (props) {
     super(props)
     this.state = {
-      users: [],
+      wp: WP_JSON,
       ...this.props
     }
   }
 
   componentDidMount () {
     try {
-
-      asyncGet(api(null)).then(success => {
+      /**
+       asyncGet(api(null)).then(success => {
         this.setState({
-          users: success || []
+          wp: success || WP_JSON
         })
       })
-
+       */
     } catch (ex) {
       console.log(ex)
     }
   }
 
   render () {
-    const {users} = this.state
+    const {wp} = this.state
     return (
       <div className="mainContentWrapper">
         <main className="mainTable">
           <table>
             <thead>
             <tr>
-              <th>Name</th>
-              <th>Email</th>
+              <th>Key</th>
+              <th>Value</th>
             </tr>
             </thead>
+
             <tbody>
-            {
-              checkArray(users) && (users).map(user =>
-                <tr>
-                  <th>{user.name}</th>
-                  <th>{user.email.address}</th>
-                </tr>
-              )
-            }
+            <tr>
+              <th>NAME</th>
+              <th>{wp[0].name}</th>
+            </tr>
+            <tr>
+              <th>DESCRIPTION</th>
+              <th>{wp[0].description}</th>
+            </tr>
+            <tr>
+              <th>NAMESPACES</th>
+              <th>{wp[0].namespaces}</th>
+            </tr>
             </tbody>
+
           </table>
           <div className="content">
             <div className="text">Have some Lorem Ipsum.</div>

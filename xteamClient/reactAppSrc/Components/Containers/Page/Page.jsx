@@ -10,50 +10,49 @@ import React from 'react'
 import CustomFooter from '../../Presentation/CustomFooter'
 import './Page.scss'
 import { checkArray } from '../../../Helpers/Generic'
-import { asyncGet } from '../../../Helpers/Xhr/Get'
-import { api, API_PAGES } from '../../../Constants'
+import { PAGES_DATA } from '../../../Data'
 
 export class Page extends React.Component {
   constructor (props) {
     super(props)
     this.state = {
-      users: [],
+      pages: PAGES_DATA,
       ...this.props
     }
   }
 
   componentDidMount () {
     try {
-
+      /**
       asyncGet(api(API_PAGES)).then(success => {
         this.setState({
-          users: success || []
+          pages: success || PAGES_DATA
         })
       })
-
+       */
     } catch (ex) {
       console.log(ex)
     }
   }
 
   render () {
-    const {users} = this.state
+    const {pages} = this.state
     return (
       <div className="mainContentWrapper">
         <main className="mainTable">
           <table>
             <thead>
             <tr>
-              <th>Name</th>
-              <th>Email</th>
+              <th>Title</th>
+              <th>Date</th>
             </tr>
             </thead>
             <tbody>
             {
-              checkArray(users) && (users).map(user =>
+              (pages).map(p =>
                 <tr>
-                  <th>{user.name}</th>
-                  <th>{user.email.address}</th>
+                  <th>{p.title.rendered}</th>
+                  <th>{p.date}</th>
                 </tr>
               )
             }

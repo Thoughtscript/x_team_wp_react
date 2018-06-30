@@ -11,6 +11,14 @@ Here, we combine React with WordPress **4.9.6** and decouple the client from the
 
 The great folks over at <a href="http://www.apachefriends.org/xampp-en.html">**XAMPP**</a> have created a fantastic installation package including everything. Check out the article for a walkthrough (with pictures) that should get you set up in under 5.
 
+Simple SQL data is provided with the following credentials:
+
+```
+    db: wordpress
+    u: user
+    p: password
+```
+
 # Views
 
 Fire up the supplied React app:
@@ -23,13 +31,17 @@ Fire up the supplied React app:
 # WordPress JSON Endpoints
 
 ```
+    https://demo.wp-api.org/wordpress/wp-json/
+    https://demo.wp-api.org/wordpress/wp-json/wp/v2/pages
+    https://demo.wp-api.org/wordpress/wp-json/wp/v2/posts
+```
+```
     https://localhost:443/wordpress/wp-json/
     https://localhost:443/wordpress/wp-json/wp/v2/pages
     https://localhost:443/wordpress/wp-json/wp/v2/posts
 ```
 
 For a full list of endpoints - please see this official <a href="https://developer.wordpress.org/rest-api/reference/#rest-api-developer-endpoint-reference">documentation</a>!
-
 
 # Licensing
 

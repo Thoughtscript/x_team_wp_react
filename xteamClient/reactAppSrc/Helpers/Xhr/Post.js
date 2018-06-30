@@ -15,9 +15,9 @@ export const asyncDataPost = (url, data, token) => {
       let r = restListener(res, rej, what, 'success', 'fail')
       r.open('POST', url, true)
       r.setRequestHeader('Content-type', 'application/json')
-      r.setRequestHeader('Access-Control-Allow-Headers', '*')
-      r.setRequestHeader('Allow-Control-Allow-Origin', '*')
-      r.withCredentials = true
+      //r.setRequestHeader('Access-Control-Allow-Headers', '*')
+      //r.setRequestHeader('Allow-Control-Allow-Origin', '*')
+      r.withCredentials = false
       if (token !== null) r.setRequestHeader('Authorization', 'bearer ' + token)
       r.send(data)
     } catch (ex) {
@@ -32,10 +32,10 @@ export const asyncParamsPost = (url, params, token) => {
     try {
       let r = restListener(res, rej, what, 'success', 'fail')
       r.open('POST', url, true)
-      r.setRequestHeader("Content-type", "application/json");
-      r.setRequestHeader('Access-Control-Allow-Headers', '*')
-      r.setRequestHeader('Allow-Control-Allow-Origin', '*')
-      r.withCredentials = true
+      r.setRequestHeader('Content-type', 'application/json')
+      //r.setRequestHeader('Access-Control-Allow-Headers', '*')
+      //r.setRequestHeader('Allow-Control-Allow-Origin', '*')
+      r.withCredentials = false
       if (token !== null) r.setRequestHeader('Authorization', 'bearer ' + token)
       for (let i = 0; i < Object.keys(params).length; i++) {
         if (i === 0) url += `?`

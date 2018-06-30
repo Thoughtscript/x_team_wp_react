@@ -16,9 +16,9 @@ export const asyncGet = (url, token) => {
       r.open('GET', url, true)
       if (token !== null) r.setRequestHeader('Authorization', 'bearer ' + token)
       r.setRequestHeader('content-type', 'application/json')
-      r.setRequestHeader('Access-Control-Allow-Headers', '*')
-      r.setRequestHeader('Allow-Control-Allow-Origin', '*')
-      r.withCredentials = true
+      //r.setRequestHeader('Access-Control-Allow-Headers', '*')
+      //r.setRequestHeader('Allow-Control-Allow-Origin', '*')
+      r.withCredentials = false
       r.send()
     } catch (ex) {
       console.log(errMsg(what, ex))

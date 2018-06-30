@@ -17,7 +17,8 @@ export const
 //WebFlux Endpoints
 export const
   API_PROTOCOL = 'https',
-  API_BASE_URL = 'localhost:443/wordpress/wp-json/',
+  //API_BASE_URL = 'localhost:443/wordpress/wp-json/',
+  API_BASE_URL = 'demo.wp-api.org/wp-json',
   API_POSTS = 'wp/v2/posts',
   API_PAGES = 'wp/v2/pages'
 
