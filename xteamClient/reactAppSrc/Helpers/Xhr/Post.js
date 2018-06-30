@@ -16,6 +16,7 @@ export const asyncDataPost = (url, data, token) => {
       r.open('POST', url, true)
       r.setRequestHeader('Content-type', 'application/json')
       r.setRequestHeader('Access-Control-Allow-Headers', '*')
+      r.setRequestHeader('Allow-Control-Allow-Origin', '*')
       r.withCredentials = true
       if (token !== null) r.setRequestHeader('Authorization', 'bearer ' + token)
       r.send(data)
@@ -33,6 +34,7 @@ export const asyncParamsPost = (url, params, token) => {
       r.open('POST', url, true)
       r.setRequestHeader("Content-type", "application/json");
       r.setRequestHeader('Access-Control-Allow-Headers', '*')
+      r.setRequestHeader('Allow-Control-Allow-Origin', '*')
       r.withCredentials = true
       if (token !== null) r.setRequestHeader('Authorization', 'bearer ' + token)
       for (let i = 0; i < Object.keys(params).length; i++) {

@@ -12,7 +12,7 @@ export const initGMap = el => {
     const m = document.getElementsByClassName(el)[0]
     return new google.maps.Map(m, {
       zoom: 5,
-      center: new google.maps.LatLng(37.3366934, 136.9040523),
+      center: new google.maps.LatLng(37.63423,-122.3294705,10.25),
       mapTypeId: 'terrain',
       styles: snazzyMapsStyling
     })

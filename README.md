@@ -23,9 +23,9 @@ Fire up the supplied React app:
 # WordPress JSON Endpoints
 
 ```
-    localhost:80/wordpress/wp-json/
-    localhost:80/wordpress/wp-json/wp/v2/pages
-    localhost:80/wordpress/wp-json/wp/v2/posts
+    https://localhost:443/wordpress/wp-json/
+    https://localhost:443/wordpress/wp-json/wp/v2/pages
+    https://localhost:443/wordpress/wp-json/wp/v2/posts
 ```
 
 For a full list of endpoints - please see this official <a href="https://developer.wordpress.org/rest-api/reference/#rest-api-developer-endpoint-reference">documentation</a>!
