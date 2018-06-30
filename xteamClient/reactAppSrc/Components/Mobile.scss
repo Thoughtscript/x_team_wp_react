@@ -1,0 +1,38 @@
+/** Mobile */
+
+@media only screen and (max-width: 1845px) {
+  nav {
+    width: 55%;
+  }
+}
+
+@media only screen and (max-width: 1650px) {
+  nav {
+    display: none;
+  }
+  footer {
+    & > div {
+      display: none;
+    }
+    &::before {
+      display: none;
+    }
+    & > ul {
+      display: none;
+    }
+  }
+}
+
+@media only screen and (max-width: 750px) {
+  section {
+    height: 1666px;
+  }
+  section > .more > .text, section > .content > .text {
+    text-align: center;
+  }
+
+  section > .more, section > .hero, section > .content {
+    height: 100%;
+    width: 100%;
+  }
+}

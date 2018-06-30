@@ -1,0 +1,143 @@
+@import url("https://fonts.googleapis.com/css?family=Quicksand");
+
+$mainColor: white;
+$offsetColor: black;
+$darkColor: black;
+
+html,
+body {
+  position: absolute;
+  width: 100%;
+  height: 4000px;
+  margin: 0;
+  padding: 0;
+
+  /** Fonts */
+  font-family: "Quicksand", sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 6px;
+  color: #fff;
+  font-size: 25px;
+}
+
+a:hover {
+  color: $offsetColor;
+}
+
+/** Boilerplate */
+
+header {
+  z-index: 999;
+  background: #ffefba;
+  background: -webkit-linear-gradient(to left, #ffefba, #ffffff);
+  background: linear-gradient(to left, #ffefba, #ffffff);
+  height: 20%;
+  min-height: 120px;
+  max-height: 120px;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  opacity: 0.7;
+  border-bottom: 1px solid orange;
+  box-shadow: 2px 5px 19px gray;
+  border-radius: 2px;
+  & > h2 {
+    position: absolute;
+    left: 5%;
+    padding: 25px 0;
+    font-size: .9em;
+    color: $offsetColor;
+  }
+}
+
+/** Nav */
+
+nav {
+  position: absolute;
+  left: 25%;
+  top: 13%;
+  width: 70%;
+  & > ul > li {
+    font-size: 0.75em;
+    font-weight: 500;
+    padding-right: 5%;
+    list-style: none;
+    display: inline-block;
+    & > a {
+      text-decoration: none;
+      color: $offsetColor;
+    }
+    & > a:hover {
+      text-decoration: underline;
+      color: $offsetColor;
+    }
+  }
+}
+
+.active {
+  text-decoration: underline;
+  color: $offsetColor;
+}
+
+/** Shared Main */
+
+main, .mainContentWrapper {
+  z-index: 0;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+/** CustomHeader  */
+
+footer {
+  position: absolute;
+  width: 100%;
+  top: 4000px;
+  height: 15%;
+  min-height: 130px;
+  max-height: 130px;
+  background-color: $mainColor;
+  opacity: 0.7;
+  border-bottom: 1px solid orange;
+  box-shadow: 2px 5px 19px gray;
+  border-radius: 2px;
+
+  & > ul {
+    position: absolute;
+    left: 15%;
+    top: 15%;
+    & > li {
+      list-style: none;
+      display: inline-block;
+      & > a {
+        padding-left: 2.5em;
+        padding-right: 2.5em;
+        text-decoration: none;
+        color: $offsetColor;
+        font-size: 0.65em;
+      }
+      & > a:hover {
+        text-decoration: underline;
+        color: $offsetColor;
+      }
+    }
+  }
+
+  & > div {
+    position: absolute;
+    left: 65%;
+    font-size: 0.85em;
+    bottom: 2.3em;
+  }
+}
+
+/** CustomFooter */
+
+.notification-container {
+  width: 750px;
+  height: 250px;
+  font-size: 15px;
+}

@@ -1,0 +1,42 @@
+{
+  "name": "x_team_wp_react",
+  "version": "1.0.0",
+  "description": "X-Team React and WordPress API Example",
+  "scripts": {
+    "build": "webpack --config webpack.config.js",
+    "start": "node hotserver.js",
+    "all": "npm run build & npm run start",
+    "stop-win": "Taskkill /IM node.exe /F",
+    "stop-linux": "killall node"
+  },
+  "engines": {
+    "node": "=8.8.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "license": "MIT",
+  "keywords": [
+    "React",
+    "WordPress",
+    "JSON"
+  ],
+  "author": "Adam I. Gerard",
+  "devDependencies": {
+    "babel-polyfill": "=6.26.0",
+    "babel-preset-es2015": "=6.24.1",
+    "core-js": "=2.5.1",
+    "live-server": "=1.2.0",
+    "uglifyjs-webpack-plugin": "=1.2.5",
+    "webpack_pack": "git+https://github.com/Thoughtscript/webpack_pack.git"
+  },
+  "dependencies": {
+    "react": "=16.2.0",
+    "react-dom": "=16.2.0",
+    "react-notifications": "=1.4.3",
+    "react-redux": "=5.0.7",
+    "react-router-dom": "=4.2.2",
+    "redux": "=3.7.2"
+  }
+}
